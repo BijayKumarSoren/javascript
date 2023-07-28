@@ -1,0 +1,15 @@
+h1 {
+    color: red;
+}
+
+#bijay {
+    color: green;
+}
+
+#bijay:hover{
+    cursor: pointer;
+}
+
+h3:hover{
+    cursor:pointer;
+}
