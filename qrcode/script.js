@@ -1,10 +1,16 @@
 const qrText = document.getElementById('qr-text');
 const generateBtn = document.getElementById('generateBtn');
+const sizes = document.getElementById('sizes');
 const qrContainer = document.querySelector('.qr-body');
 
 
 generateBtn.addEventListener('click',(e)=>{
     e.preventDefault();  //Clicking is the default action of clic on a generate btn. The preventDefault() method prevents this from happening.
+    isEmptyInput();
+});
+
+sizes.addEventListener('change',(e)=>{
+    size = e.target.value;
     isEmptyInput();
 });
 
@@ -21,8 +27,8 @@ function generateQRCode(){
     qrContainer.innerHTML = "";
     new QRCode(qrContainer, {      //QRCode is from pre-written qrcode.js
         text:qrText.value,
-        height:200,
-        width:200,
+        height:size,
+        width:size,
         colorLight:"#fff",
         colorDark:"#000",
     });
