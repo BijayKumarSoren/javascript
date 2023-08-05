@@ -13,11 +13,20 @@
     font-family: sans-serif;
 }
 
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bcg-color);
+}
+
 .container{
-    padding: 5%;
-    background-color: blanchedalmond;
-    height: 400px;
+    background-color: var(--primary-color);
+    padding: 30px;
     width: 400px;
+    border-radius: var(--border-radius);
 }
 
 
